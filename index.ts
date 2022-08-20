@@ -13,5 +13,5 @@ export interface ProcessVideoFrameResult {
 export function processVideoFrame(frame: Frame, userInfo:UserInfo): ProcessVideoFrameResult {
   'worklet'
   // @ts-ignore
-  return __vseProcessVideoFrame(frame, userInfo)
+  return __vseProcessVideoFrameV3(frame, userInfo)
 }
