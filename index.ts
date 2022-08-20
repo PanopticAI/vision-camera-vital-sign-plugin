@@ -2,11 +2,8 @@
 
 import type { Frame } from 'react-native-vision-camera'
 
-/**
- * Scans QR codes.
- */
-export function processVideoFrame(frame: Frame): string[] {
+export function processVideoFrame(frame: Frame, userInfo:any): string[] {
   'worklet'
   // @ts-ignore
-  return __vseProcessVideoFrame(frame)
+  return __vseProcessVideoFrame(frame, userInfo)
 }
