@@ -1,22 +1,17 @@
 // VisionCameraVitalSignPlugin.m
 
 #import "VisionCameraVitalSignPlugin.h"
+#import <VisionCamera/FrameProcessorPlugin.h>
+#import <VisionCamera/Frame.h>
 #import "react-native-vital-sign-plugin/VitalSignPlugin.h"
-
 
 @implementation VisionCameraVitalSignPlugin
 
-RCT_EXPORT_MODULE()
-
-RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnull NSNumber *)numberArgument callback:(RCTResponseSenderBlock)callback)
-{
-    [VitalSignEngineCoreProxy processVideoFrame:NULL userInfo:NULL];
-    
-    
-    // TODO: Implement some actually useful functionality
-    callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
-    
-    
+static inline id vseProcessFrame(Frame* frame, NSArray* args) {
+    CMSampleBufferRef buffer = frame.buffer;
+    return [VitalSignEngineCoreProxy processVideoFrame:buffer userInfo:args[0]];
 }
+
+VISION_EXPORT_FRAME_PROCESSOR(vseProcessFrame)
 
 @end

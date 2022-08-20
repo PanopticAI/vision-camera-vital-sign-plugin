@@ -2,6 +2,5 @@
 
 #import <React/RCTBridgeModule.h>
 
-@interface VisionCameraVitalSignPlugin : NSObject <RCTBridgeModule>
-
+@interface VisionCameraVitalSignPlugin : NSObject
 @end

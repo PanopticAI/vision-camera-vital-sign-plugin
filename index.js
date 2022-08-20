@@ -1,7 +1,11 @@
 // main index.js
 
-import { NativeModules } from 'react-native';
+import type { Frame } from 'react-native-vision-camera'
 
-const { VisionCameraVitalSignPlugin } = NativeModules;
-
-export default VisionCameraVitalSignPlugin;
+/**
+ * Scans QR codes.
+ */
+export function processVideoFrame(frame: Frame): string[] {
+  'worklet'
+  return __vseProcessVideoFrame(frame)
+}
