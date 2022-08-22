@@ -72,6 +72,9 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation project(path: ':react-native-vision-camera')
+    implementation 'androidx.camera:camera-core:1.0.2'
+  implementation project(path: ':react-native-vital-sign-plugin')
 }
 
 def configureReactNativePom(def pom) {
