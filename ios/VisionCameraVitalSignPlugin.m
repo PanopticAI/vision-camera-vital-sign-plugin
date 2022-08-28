@@ -10,10 +10,10 @@
 
 @implementation VisionCameraVitalSignPlugin
 
-static inline id vseProcessVideoFrame(Frame* frame, NSArray* args) {
+static inline id vseProcessFrame(Frame* frame, NSArray* args) {
     return [VitalSignPluginProxy processVideoFrame:frame.buffer userInfo:args[0]];
 }
 
-VISION_EXPORT_FRAME_PROCESSOR(vseProcessVideoFrame)
+VISION_EXPORT_FRAME_PROCESSOR(vseProcessFrame)
 
 @end

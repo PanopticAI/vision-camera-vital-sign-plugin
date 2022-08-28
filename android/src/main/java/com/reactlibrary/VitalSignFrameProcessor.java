@@ -19,6 +19,6 @@ public class VitalSignFrameProcessor extends FrameProcessorPlugin {
         return VitalSignPluginModule.processVideoFrame(image, userInfoMap);
     }
     public VitalSignFrameProcessor() {
-      super("vseProcessVideoFrame");
+      super("vseProcessFrame");
     }
 }

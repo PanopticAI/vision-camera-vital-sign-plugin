@@ -11,20 +11,19 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   vision-camera-vital-sign-plugin
                    DESC
-  s.homepage     = "https://github.com/github_account/vision-camera-vital-sign-plugin"
+  s.homepage     = "https://github.com/PanopticAI/vision-camera-vital-sign-plugin"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
   # s.license    = { :type => "MIT", :file => "LICENSE" }
-  s.authors      = { "Your Name" => "yourname@email.com" }
+  s.authors      = { "Eddie Lau" => "eddie@touchutility.com" }
   s.platforms    = { :ios => "9.0" }
-  s.source       = { :git => "https://github.com/github_account/vision-camera-vital-sign-plugin.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/PanopticAI/vision-camera-vital-sign-plugin.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-  # ...
-  # s.dependency "..."
+  s.dependency "react-native-vital-sign-plugin"
 end
 
