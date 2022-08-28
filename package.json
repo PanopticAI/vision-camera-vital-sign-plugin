@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/vision-camera-vital-sign-plugin.git",
-    "baseUrl": "https://github.com/github_account/vision-camera-vital-sign-plugin"
+    "url": "git+https://github.com/PanopticAI/vision-camera-vital-sign-plugin.git",
+    "baseUrl": "https://github.com/PanopticAI/vision-camera-vital-sign-plugin"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Eddie Lau",
+    "email": "eddie@touchutility.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
@@ -32,7 +32,8 @@
   "peerDependencies": {
     "react": ">=16.8.1",
     "react-native": ">=0.60.0-rc.0 <1.0.x",
-    "react-native-vision-camera": "^2.14.0"
+    "react-native-vision-camera": "^2.14.0",
+    "react-native-vital-sign-plugin": "^2.0.0"
   },
   "devDependencies": {
     "react": "^16.9.0",
