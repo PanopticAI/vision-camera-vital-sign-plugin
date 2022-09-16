@@ -15,8 +15,16 @@ export interface ProcessFrameOptions {
   userInfo: UserInfo
 }
 
-export function processVideoFrame(options:ProcessFrameOptions): ProcessFrameResult {
-  'worklet'
+export function processFrame(frame: any, bounds: NormalizedFacebox | undefined, userInfo: UserInfo): GetHealthResult {
+  'worklet';
   // @ts-ignore
-  return __vseProcessVideoFrame(options.videoFrame, options.userInfo)
+  // eslint-disable-next-line no-undef
+  return __vseProcessFrame(frame, bounds, userInfo);
+}
+
+export function processVideoFrame(options: ProcessFrameOptions): ProcessFrameResult {
+  'worklet';
+  // @ts-ignore
+  // eslint-disable-next-line no-undef
+  return __vseProcessFrame(options.videoFrame, options.userInfo)
 }
