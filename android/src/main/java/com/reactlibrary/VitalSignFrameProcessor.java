@@ -15,10 +15,18 @@ public class VitalSignFrameProcessor extends FrameProcessorPlugin {
     @Nullable
     @Override
     public Object callback(@NonNull androidx.camera.core.ImageProxy image, @NonNull Object[] params) {
-        ReadableMap userInfoMap = (ReadableMap)params[0];
-        return VitalSignPluginModule.processVideoFrame(image, userInfoMap);
+        if (params.length == 1) {
+            ReadableMap userInfoMap = (ReadableMap) params[0];
+            return VitalSignPluginModule.processVideoFrame(image, userInfoMap);
+        } else if (params.length == 2) {
+            ReadableMap faceboxMap = (ReadableMap) params[0];
+            ReadableMap userInfoMap = (ReadableMap) params[1];
+            return VitalSignPluginModule.processVideoFrame(image, faceboxMap, userInfoMap);
+        } else {
+            return null;
+        }
     }
     public VitalSignFrameProcessor() {
-      super("vseProcessVideoFrame");
+      super("vseProcessFrame");
     }
 }
