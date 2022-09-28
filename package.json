@@ -1,7 +1,7 @@
 {
   "name": "vision-camera-vital-sign-plugin",
   "title": "React Native Vision Camera Vital Sign Plugin",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "description": "TODO",
   "main": "index.ts",
   "files": [
